@@ -1,0 +1,110 @@
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f5;
+    color: #222;
+}
+
+.navbar {
+    background: #1b2a41;
+    padding: 14px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Form: setiap field berdiri sendiri di barisnya */
+form.stack label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+form.stack input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+form.stack button {
+    display: block;
+    margin-top: 16px;
+    background: #1b2a41;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form.stack button:hover {
+    background: #28415e;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table th {
+    background: #eee;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.home-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.home-links a {
+    background: #1b2a41;
+    color: #fff;
+    padding: 16px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.home-links a:hover {
+    background: #28415e;
+}

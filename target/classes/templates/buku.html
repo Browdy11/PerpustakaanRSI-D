@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Buku</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="navbar">
+    <a th:href="@{/}">Beranda</a>
+    <a th:href="@{/buku}">Buku</a>
+    <a th:href="@{/anggota}">Anggota</a>
+</div>
+
+<div class="container">
+    <h1>Daftar Buku</h1>
+
+    <form class="stack" th:action="@{/buku}" method="get">
+        <label>Cari judul</label>
+        <input name="kata" th:value="${kata}" placeholder="Cari judul">
+        <button type="submit">Cari</button>
+    </form>
+
+    <table>
+        <tr><th>ID</th><th>Judul</th><th>Stok</th></tr>
+        <tr th:each="b : ${daftarBuku}">
+            <td th:text="${b.idBuku}">B001</td>
+            <td th:text="${b.judul}">Judul buku</td>
+            <td th:text="${b.stok}">0</td>
+        </tr>
+    </table>
+
+    <h2><a th:href="@{/buku/tambah}">Tambah Buku</a></h2>
+</div>
+
+</body>
+</html>
