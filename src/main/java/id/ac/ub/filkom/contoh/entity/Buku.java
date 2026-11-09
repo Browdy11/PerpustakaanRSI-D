@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/** Entity: objek data yang dipetakan ke tabel "buku". */
 @Entity
 @Table(name = "buku")
 public class Buku {
@@ -14,15 +13,15 @@ public class Buku {
     @Column(name = "id_buku", length = 10)
     private String idBuku;
 
-    @Column(name = "judul", length = 200, nullable = false)
+    @Column(name = "judul", nullable = false)
     private String judul;
 
     @Column(name = "stok")
-    private int stok;
+    private Integer stok;
 
-    protected Buku() { }               // wajib ada untuk JPA
+    protected Buku() { }
 
-    public Buku(String idBuku, String judul, int stok) {
+    public Buku(String idBuku, String judul, Integer stok) {
         this.idBuku = idBuku;
         this.judul = judul;
         this.stok = stok;
@@ -30,5 +29,8 @@ public class Buku {
 
     public String getIdBuku() { return idBuku; }
     public String getJudul()  { return judul; }
-    public int getStok()      { return stok; }
+    public Integer getStok()  { return stok; }
+
+    // Ditambahkan untuk kebutuhan modul Peminjaman
+    public void setStok(Integer stok) { this.stok = stok; }
 }
